@@ -28,13 +28,13 @@ def obter_nome_arquivo(diretorio, nome_arquivo):
         contador += 1
     return f"{nome_base}_{contador}{extensao}"
 
-# Interface gráfica para solicitar a quantidade de objetos e selecionar o diretório de salvamento
+# Tela de definição de quantidade de objetos e onde salvar
 root = tk.Tk()
 root.withdraw()
 quantidade = simpledialog.askinteger("Quantidade de Objetos", "Informe a quantidade de objetos a serem gerados:")
 diretorio = selecionar_diretorio()
 
-# Objeto JSON original
+# Objeto Modelo - alterar conforme a necessidade
 objeto_json_original = {
     "dataAtualizacaoCadastral": "2024-01-01",
     "indicativoCadastroAtivo": "S",
@@ -45,8 +45,8 @@ objeto_json_original = {
     "tipoContribuinte": 1
 }
 
-# Multiplicar o objeto JSON
-objetos_multiplicados = multiplicar_objeto_json(objeto_json_original, quantidade)
+
+objetos_multiplicados = multiplicar_objeto_json(objeto_json_original, quantidade) # Multiplicar o objeto JSON
 
 # Nome do arquivo
 nome_arquivo = "cadastrosContribuintes.json"

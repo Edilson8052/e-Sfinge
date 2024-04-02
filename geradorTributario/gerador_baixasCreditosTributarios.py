@@ -37,7 +37,7 @@ def generate_objects():
     
     print("Arquivo salvo com sucesso!")
 
-# Configuração da interface gráfica
+
 root = tk.Tk()
 root.title("Gerador de Objetos Imobiliários")
 

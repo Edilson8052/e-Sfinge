@@ -23,7 +23,7 @@ def generate_objects():
        
         cadastros_imobiliarios.append(data)
     
-    # Salva os objetos em um arquivo JSON
+    
     file_path = os.path.join(directory, "diarioGeralArrecadacao.json")
     if os.path.exists(file_path):
         base, extension = os.path.splitext(file_path)
@@ -37,7 +37,7 @@ def generate_objects():
     
     print("Arquivo salvo com sucesso!")
 
-# Configuração da interface gráfica
+
 root = tk.Tk()
 root.title("Gerador de Objetos Imobiliários")
 

@@ -8,7 +8,7 @@ def generate_objects():
     initial_value = float(entry_initial_value.get())
     directory = filedialog.askdirectory()
     
-    cadastros_imobiliarios = []
+    diarioGeralArrecadacao = []
     for i in range(num_objects):
         data =  {
           "anoCodigoSequencialOperacaoArrecadacao": 2024,
@@ -21,7 +21,7 @@ def generate_objects():
           "valorCreditoTributario": 1009.79
         }
        
-        cadastros_imobiliarios.append(data)
+        diarioGeralArrecadacao.append(data)
     
     
     file_path = os.path.join(directory, "diarioGeralArrecadacao.json")
@@ -33,7 +33,7 @@ def generate_objects():
         file_path = f"{base}_{i}{extension}"
     
     with open(file_path, 'w') as f:
-        json.dump({"diarioGeralArrecadacao": cadastros_imobiliarios}, f, indent=4)
+        json.dump({"diarioGeralArrecadacao": diarioGeralArrecadacao}, f, indent=4)
     
     print("Arquivo salvo com sucesso!")
 
